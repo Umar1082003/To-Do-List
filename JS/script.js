@@ -110,7 +110,7 @@ function clickedToDelete(event) {
 function clickedToEdit(event) {
   let li = event.target.parentElement;
   let p = li.querySelector("p").innerText;
-  // let currentTime = new Date().toLocaleString("en", {timeStyle: "short"});
+
   li.innerHTML = `
             <span class="save">save</span>
             <input class="editInp" type:"text" value="${p}">
