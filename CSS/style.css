@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: cursive, sans-serif;
+}
+
+:root{
+    --white-color: #fff;
+    --gray-color: #a2a2a2;
+}
+
+body{
+    background: linear-gradient(310deg, #00C9FF, #9258FF);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: var(--white-color);
+    padding: 40px 20px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
+}
+
+.date-container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    color: var(--gray-color);
+}
+
+hr{
+    margin-top: 10px;
+}
+
+h2{
+    margin: 20px 0;
+    padding-left: 10px;
+    border-left: orangered 3px solid;
+    font-size: clamp(16px, 4vw, 32px);
+    letter-spacing: 2px;
+    text-shadow: 4px 0px 9px #0000005e;
+}
+
+.form{
+    position: relative;
+} 
+
+.form .inp{
+    padding: 15px 10px;
+    background-color: transparent;
+    border: 1px solid var(--gray-color);
+    outline: 0;
+    border-radius: 5px;
+    margin: 5px 0 15px 0;
+    width: 100%;
+}
+
+.form .inp::placeholder{
+    color: var(--gray-color);
+}
+
+.form .btn{
+    position: absolute;
+    right: 10px;
+    bottom: 23px;
+    background: linear-gradient(120deg, #00C9FF, #9258FF);
+    color: var(--white-color);
+    border: 1px solid var(--gray-color);
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filtering{
+    display: flex;
+    justify-content: space-around;
+}
+
+.filtering *{
+    background: linear-gradient(120deg, #00C9FF, #9258FF);
+    color: var(--white-color);
+    border: 1px solid var(--gray-color);
+    padding: 8px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form .btn:hover,
+.filtering *:hover{
+    background: linear-gradient(360deg, #00C9FF, #9258FF);
+    box-shadow: 1px 1px 9px #00C9FF, 2px 2px 7px #9258FF;
+    text-shadow: 4px 4px 8px;
+    color: var(--white-color);
+}
+
+.active{
+    box-shadow: -1px -1px 9px #00C9FF, 1px 1px 7px #9258FF;
+}
+
+.unactive{
+    background: linear-gradient(360deg, #00c8ffab, #9258ffb3);
+    /* color: #000; */
+}
+.list {
+    height: 200px;
+    overflow-y: auto;
+    background-color: #d6edfe;
+    border-radius: 5px;
+    padding: 10px 5px;
+    margin: 15px 0;
+}
+
+.list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.list::-webkit-scrollbar-thumb {
+    background: #81cbff;
+    border-radius: 10px;
+}
+
+.task{
+    position: relative;
+    background-color: #E3F2FD;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 5px 2px 5px 20px;
+    width: 88%;
+    height: 40px;
+}
+.task p {
+    width: 180px;
+    white-space: normal;
+    overflow-wrap: break-word;
+}
+.check{
+    position: absolute;
+    color: green;
+    right: 60px;
+    cursor: pointer;
+}
+.completed{
+    /* background-color: #c8e6c9; */
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+.edit{
+    position: absolute;
+    right: 30px;
+    cursor: pointer;
+}
+.check:hover,
+.edit:hover,
+.delete:hover{
+    transform: scale(1.4);
+}
+.editInp{
+    width: 95%;
+    padding: 10px;
+    background-color: transparent;
+    border: 1px solid var(--gray-color);
+    outline: 0;
+    border-radius: 5px;
+    /* margin: 5px 0 15px 0; */
+}
+.save{
+    color: green;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.delete{
+    cursor: pointer;
+}
+.timeAddtask{
+    position: absolute;
+    margin-right: 5px;
+    right: -55px;
+    font-size: clamp(10px, 2vw, 12px);
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0;
+}
+.footer button{
+    color: orangered;
+    background-color: transparent;
+    border: 0;
+    padding: 7px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+.footer button:hover{
+    text-shadow: 0px 1px 9px;
+}
+.footer p{
+    text-wrap: nowrap;
+    padding: 0 10px;
+    color: var(--gray-color);
+}
+
+@media (max-width: 768px) {
+  .timeAddtask{
+    font-size: 10px;
+  }
+}
+@media (max-width: 1440px) {
+  .timeAddtask{
+    font-size: 10px;
+    right: -55px;
+  }
+}

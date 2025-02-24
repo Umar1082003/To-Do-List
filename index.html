@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="date-container">
+            <div>
+                <span class="dayWeek"></span>
+                <span class="date"></span>
+            </div>
+            <div>
+                <span class="time"></span>
+            </div>
+        </div> <!-- end date-->
+        <hr>
+        <h2>ToDo List</h2>
+        <div class="form">
+            <input type="text" class="inp" placeholder="Add Your Task" spellcheck="false">
+            <button type="submit" class="btn">ADD</button>
+        </div> <!-- end form-->
+        <div class="filtering">
+            <button class="all-btn active">ALL</button>
+            <button class="completed-btn unactive">COMPLETED</button>
+            <button class="incompleted-btn unactive">INCOMPLETED</button>
+        </div> <!-- end filtering-->
+        <ul class="list">
+        </ul>
+        <hr>
+        <div class="footer">
+            <p><span></span> items</p>
+            <button>Delete All</button>
+        </div> <!-- end footer-->
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>
